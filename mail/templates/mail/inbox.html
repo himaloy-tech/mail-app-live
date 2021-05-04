@@ -1,7 +1,7 @@
 {% extends "mail/layout.html" %}
-{% load static %}
 
 {% block body %}
+{% load static %}
     <h2>{{ request.user.email }}</h2>
 
     <button class="btn btn-sm btn-outline-primary" id="inbox">Inbox</button>
@@ -30,9 +30,6 @@
         <textarea class="form-control" id="compose-body" placeholder="Body" required></textarea>
         <input type="submit" class="btn btn-primary"/>
     </form>
-{% endblock %}
-
-{% block script %}
     <script src="{% static 'mail/inbox.js' %}"></script>
     <script src="{% static 'mail/send.js' %}"></script>
 {% endblock %}
